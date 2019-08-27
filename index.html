@@ -1,0 +1,166 @@
+
+<html>
+    <head>
+      <title>JavaScript!!!</title>
+      <meta charset="UTF8" />
+      <link rel="stylesheet" type="text/css" href="./css/estilo.css" />
+      <script src="js/script.js"></script>
+    </head>
+    <body id="body">
+      <img src="./img/buynow.png" id="logo" />
+      <h1>Bem-vindo à sua loja virtual!</h1>
+  
+      <center>
+        <table cellspacing="0" cellpadding="0" id="tableProd"></table>
+      </center>
+
+      <center>
+        <table cellspacing="0" cellpadding="0" id="tableVendas"></table>
+      </center>
+  
+      <center>
+        <form method="POST" id="formProd" onsubmit="cadastraDados();">
+          <fieldset id="novoprod">
+            <legend>Digite os dados do produto aqui:</legend>
+            <p>
+              <label for="cId">Id:</label>
+              <input type="text" name="tId" id="cId" required />
+            </p>
+            <p>
+              <label for="cNome">Nome:</label>
+              <input type="text" name="tNome" id="cNome" required />
+            </p>
+            <p>
+              <label for="cPreco">Preço unitário:</label>
+              <input
+                type="number"
+                step="any"
+                name="tPreco"
+                id="cPreco"
+                min="0"
+                required
+              />
+            </p>
+            <p>
+              <label for="cEstoque">Estoque disponível:</label>
+              <input
+                type="number"
+                name="tEstoque"
+                id="cEstoque"
+                min="0"
+                required
+              />
+            </p>
+          </fieldset>
+  
+          <input class="formButton" type="Submit" value="Cadastrar produto" />
+        </form>
+      </center>
+  
+      <center>
+        <form method="POST" id="remove" onsubmit="removeProd();">
+          <fieldset id="excprod">
+            <legend>Digite o id do produto a ser removido aqui:</legend>
+            <p>
+              <label for="cIdOut">Id:</label>
+              <input type="text" name="tIdOut" id="cIdOut" required />
+            </p>
+          </fieldset>
+  
+          <input class="formButton" type="Submit" value="Excluir produto" />
+        </form>
+      </center>
+  
+      <center>
+        <form method="POST" id="compra" onsubmit="efetuaCompra();" oninput="calc_preco();">
+          <fieldset id="compraprod">
+            <legend>Digite o id do produto a ser comprado aqui:</legend>
+            <p>
+              <label for="cIdComp">Id:</label>
+              <input type="text" name="tIdComp" id="cIdComp" required />
+            </p>
+            <p>
+              <label for="cQtde">Unidades do produto:</label>
+              <input type="number" name="tQtde" id="cQtde" required />
+            </p>
+            <p>
+              <label for="cTot">Valor a pagar: R$ </label>
+              <input type="number" name="tTot" id="cTot" placeholder="Total a pagar" readonly>
+            </p>
+          </fieldset>
+  
+          <input class="formButton" type="Submit" value="Comprar produto" />
+        </form>
+      </center>
+  
+      <center>
+        <form method="POST" id="edicao" onsubmit="editProd();">
+          <fieldset id="editprod">
+            <legend>
+              Digite o id do produto a ser editado:
+            </legend>
+            <p>
+              <label for="cIdEdit">Id:</label>
+              <input type="text" name="tIdEdit" id="cIdEdit" required />
+            </p>
+            <legend>
+              Digite abaixo as novas informações:
+            </legend>
+            <p>
+              <label for="cNomeEdit">Nome:</label>
+              <input type="text" name="tNomeEdit" id="cNomeEdit" required />
+            </p>
+            <p>
+              <label for="cPrecoEdit">Preço unitário:</label>
+              <input
+                type="number"
+                step="any"
+                name="tPrecoEdit"
+                id="cPrecoEdit"
+                min="0"
+                required
+              />
+            </p>
+            <p>
+              <label for="cEstoqueEdit">Estoque disponível:</label>
+              <input
+                type="number"
+                name="tEstoqueEdit"
+                id="cEstoqueEdit"
+                min="0"
+                required
+              />
+            </p>
+          </fieldset>
+  
+          <input
+            class="formButton"
+            type="Submit"
+            value="Editar dados do produto"
+          />
+        </form>
+      </center>
+  
+      <center>
+        <button class="butshowAll" onclick="listaProdutos();">
+          Conheça nossos produtos
+        </button>
+        <button id="bVendas" onclick="listaVendas();">
+          Relatório de vendas
+        </button>
+        <button id="bCad" onclick="window.HideIt('formProd'); window.HideExcept('formProd');">
+          Cadastre seu produto
+        </button>
+        <button id="bRem" onclick="window.HideIt('remove'); window.HideExcept('remove');">
+          Remova seu produto
+        </button>
+        <button id="bEd" onclick="window.HideIt('edicao'); window.HideExcept('edicao');">
+          Edite seu produto
+        </button>
+        <button id="bCo" onclick="window.HideIt('compra'); window.HideExcept('compra');">
+          Compre já
+        </button>
+      </center>
+    </body>
+  </html>
+  

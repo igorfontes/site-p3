@@ -1,0 +1,181 @@
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: "Helvetica, sans-serif";
+  }
+  
+  form {
+    width: 33%;
+    display: none;
+  }
+  
+  body {
+    background-image: url(../img/top.png);
+    background-size: auto;
+    background-color: #CFD0D4;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  input:hover {
+    background-color: #dddddd;
+  }
+  
+  .butshowAll {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: fixed;
+    left: 70;
+    top: 50%;
+    width: 8em;
+    margin-top: 1em;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  
+  .formButton {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    border-radius: 4px;
+  }
+
+  #bVendas:hover, #bEd:hover, #bCad:hover, #bRem:hover, #bCo:hover, .butshowAll:hover {
+    background-color: #dddddd;
+  }
+
+  #bVendas {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: fixed;
+    left: 70;
+    top: 50%;
+    width: 8em;
+    margin-top: 7em;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  
+  #bEd {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: fixed;
+    left: 70;
+    top: 50%;
+    width: 8em;
+    margin-top: -5em;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  
+  #bCad {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: fixed;
+    left: 70;
+    top: 50%;
+    width: 8em;
+    margin-top: -11em;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  
+  #bRem {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: fixed;
+    left: 70;
+    top: 50%;
+    width: 8em;
+    margin-top: -17em;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  
+  #bCo {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: fixed;
+    left: 70;
+    top: 50%;
+    width: 8em;
+    margin-top: 13em;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  
+  #tableProd, #tableVendas {
+    font-family: "Helvetica, sans-serif";
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 39%;
+  }
+  
+  #tableProd td,
+  #tableProd th,
+  #tableVendas td,
+  #tableVendas th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tableProd tr:nth-child(even), #tableVendas tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #tableProd tr:hover, #tableVendas tr:hover {
+    background-color: #ddd;
+  }
+  
+  #tableProd th, #tableVendas th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4caf50;
+    color: white;
+  }
